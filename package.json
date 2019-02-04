@@ -4,6 +4,7 @@
   "description": "This is a chat program that does awesome things that will wow your mom and dad.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha"
   },
   "repository": {
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/JSitter/Make-Chat#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^5.4.9"
+    "mongoose": "^5.4.9",
+    "socket.io": "^2.2.0"
   }
 }
