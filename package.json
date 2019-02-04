@@ -1,0 +1,28 @@
+{
+  "name": "make-chat",
+  "version": "1.0.0",
+  "description": "This is a chat program that does awesome things that will wow your mom and dad.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JSitter/Make-Chat.git"
+  },
+  "keywords": [
+    "chat",
+    "websocket"
+  ],
+  "author": "Justin Sitter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JSitter/Make-Chat/issues"
+  },
+  "homepage": "https://github.com/JSitter/Make-Chat#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.4.9"
+  }
+}
