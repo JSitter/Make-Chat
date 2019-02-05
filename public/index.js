@@ -41,9 +41,7 @@ $(document).ready(()=>{
     $('.usersOnline').append(`<div class="userOnline">${username}</div>`);
   })
 
-
 //Output the new message
-
 socket.on('new message', (data) => {
   //Only append the message if the user is currently in that channel
   let currentChannel = $('.channel-current').text();
