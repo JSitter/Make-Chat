@@ -93,6 +93,8 @@ socket.on('new channel', (newChannel) => {
 
 // Make the channel joined the current channel. Then load the messages.
 // This only fires for the client who made the channel.
+// Make the channel joined the current channel. Then load the messages.
+// This only fires for the client who made the channel.
 socket.on('user changed channel', (data) => {
   $('.channel-current').addClass('channel');
   $('.channel-current').removeClass('channel-current');
