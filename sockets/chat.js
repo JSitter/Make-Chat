@@ -20,4 +20,11 @@ module.exports = (io, socket, onlineUsers) => {
     socket.emit('get online users', onlineUsers);
   })
 
+  //This fires when a user closes out of the application
+socket.on('disconnect', () => {
+  //This deletes the user by using the username we saved to the socket
+  delete onlineUsers[socket.username]
+  io.emit('user has left', onlineUsers);
+});
+
 }
