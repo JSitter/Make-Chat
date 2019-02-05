@@ -1,0 +1,29 @@
+/* public/index.css */
+*{
+  font-family: helvetica;
+}
+
+.usernameForm{
+  display: flex;
+  width : 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#usernameInput{
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 5px;
+  width : 100%;
+}
+
+#createUserBtn{
+  width : 45%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+}
