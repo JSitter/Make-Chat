@@ -51,7 +51,7 @@ socket.on('new message', (data) => {
   `);
 })
 
-// Tutorial says this goes in /views/index.js which doesn't exist.
+// TODO: Add bug report to Tutorial Page 6. Says this goes in /views/index.js which doesn't exist.
 // Putting it here instead.
 socket.on('get online users', (onlineUsers) => {
   //You may have not have seen this for loop before. It's syntax is for(key in obj)
@@ -68,5 +68,16 @@ socket.on('user has left', (onlineUsers) => {
     $('.usersOnline').append(`<p>${username}</p>`);
   }
 });
+
+
+$('#newChannelBtn').click( () => {
+  let newChannel = $('#newChannelInput').val();
+
+  if(newChannel.length > 0){
+    // Emit the new channel to the server
+    socket.emit('new channel', newChannel);
+    $('#newChannelInput').val("");
+  }
+})
 
 })
