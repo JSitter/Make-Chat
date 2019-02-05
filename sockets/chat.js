@@ -31,6 +31,7 @@ module.exports = (io, socket, onlineUsers, channels) => {
     io.emit('user has left', onlineUsers);
   });
 
+
   socket.on('new channel', (newChannel) => {
     //Save the new channel to our channels object. The array will hold the messages.
     channels[newChannel] = [];
@@ -44,5 +45,14 @@ module.exports = (io, socket, onlineUsers, channels) => {
       messages : channels[newChannel]
     });
   })
+
+  //Have the socket join the room of the channel
+socket.on('user changed channel', (newChannel) => {
+  socket.join(newChannel);
+  socket.emit('user changed channel', {
+    channel : newChannel,
+    messages : channels[newChannel]
+  });
+})
 
 }

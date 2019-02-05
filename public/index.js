@@ -34,6 +34,7 @@ $(document).ready(()=>{
       $('#chatInput').val("");
     }
   });
+
   //socket listeners
   socket.on('new user', (username) => {
     console.log(`${username} has joined the chat`);
